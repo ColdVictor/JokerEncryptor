@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joker Encryptor</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header class="heading">
+        <div class="heading__logo">
+            <img class="heading__logo-default" src="./assets/joker1.png" alt="Joker1">
+            <img class="heading__logo-hover" src="./assets/joker2.png" alt="Joker2">
+        </div>
+
+        <h1 class="heading__title">JOKER ENCRYPTOR</h1>
+    </header>
+
+    <br>
+    
+    <main class="container">
+        <section class="container__leftbox">
+            <textarea class="container__text" cols="40" rows="20"  placeholder="Enter your text..."></textarea>
+
+            <div class="container__info">
+                <h6>Only lowercase letters and no accent.</h6>
+            </div>
+
+            <br>
+
+            <div class="container__buttons">
+                <button onclick="encryptText()" class="btn__encrypt">Encrypt</button>
+                <button onclick="decryptText()" class="btn__decrypt">Decrypt</button>
+            </div>
+        </section>
+
+        <section class="container__rightbox">
+            <div class="container__card">
+                <h2 class="container__card-output" id="messageToCopy"></h2>
+                <img class="container__card-img" id="jokerCard" src="./assets/jokerCard.png" alt="jokerCard">
+                <h3 class="container__card-text">No messages found.</h3>
+                <h4 class="container__card-text2">Enter a message you want to encrypt.</h4>
+            </div>
+
+            <div class="container__btncopy">
+                <button onclick="copyText()" class="btn__copy">Copy</button>
+            </div>
+
+        </section>
+    </main>
+   
+    
+
+    <footer class="container__madeby">
+        <div class="madeby__text">
+        Developed by Victor Silva
+        </div>
+        
+        <div class="madeby__img">
+            <a class="madeby__gh" href="https://github.com/ColdVictor"> 
+                <img class="icon-img" src="./assets/gitHubLogo.png" alt="Logo Github">
+            </a>
+            
+            <a class="madeby__in" href="https://www.linkedin.com/in/victoorsilva/"> 
+                <img class="icon-img" src="./assets/linkedinLogo.png" alt="Logo Linkedin">
+            </a>
+        </div>
+    
+    
+    </footer>
+    
+    <script src="app.js"></script>
+</body>
+</html>
