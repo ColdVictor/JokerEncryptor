@@ -12,3 +12,5 @@
   <li>Caracteres acentuados são automaticamente convertidos para sua versão sem acento (exemplo: "á" se torna "a", "ç" se torna "c", "ê" se torna "e"...);</li>
   <li>Possui três comandos: "Encrypt" (codificar), "Decrypt" (decodificar) e "Copy" (copiar). Ao usar os dois primeiros, o conteúdo da entrada é removido e transferido para a área de saída. O botão "Copy" copia o texto da saída e depois o apaga;</li>
   <li>EXTRA: Footer com os créditos e links para meu GitHub e Linkedin</li>
+
+<h4>Deploy GitHub Pages: https://coldvictor.github.io/JokerEncryptor/</h4>
