@@ -1,28 +1,18 @@
-// A letra "e" é convertida para "enter"
-// A letra "i" é convertida para "imes"
-// A letra "a" é convertida para "ai"
-// A letra "o" é convertida para "ober"
-// A letra "u" é convertida para "ufat"
-
-// Mostra o texto na tela
 function showText(tag, text) {
     let userOutput = document.querySelector(tag);
     userOutput.innerHTML = text;       
 }
 
-// Segunda etapa, após o texto ser inserido 
 function secondStep () {
     showText ("h3", "");
     showText ("h4", "");
 
-    // Remove a img do Coringa
     document.getElementById("jokerCard").style.display = "none";
 
-    // Faz o texto encriptado ficar invisivel após ser copiado
     document.getElementById("messageToCopy").style.visibility = "visible";
 }
 
-// Encriptar texto 
+
 function encryptText() {
     let entryText = document.querySelector("textarea").value;
 
@@ -39,11 +29,10 @@ function encryptText() {
             document.querySelector("textarea").value =""; 
         }
 }
-// Decriptar texto
+
 function decryptText() {
     let textToDecrypt = document.querySelector("textarea").value;
-    
-    // Check if text area is empty
+
     if (removeDiacritics(textToDecrypt.trim()) != "") {
             let decryptedText = removeDiacritics(textToDecrypt.toLowerCase())
                                 .replace(/enter/g, "e")
@@ -60,8 +49,8 @@ function decryptText() {
         function removeDiacritics(userInput) {
             return userInput
             .normalize("NFD")
-            .replace(/[\u0300-\u036f]/g, "") // Remove diacritics
-            .replace(/[^a-zA-Z\s]/g, ""); // Remove special characters and numbers
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/[^a-zA-Z\s]/g, "");
     }
 
     function copyText() 
